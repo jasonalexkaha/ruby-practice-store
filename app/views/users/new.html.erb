@@ -1,0 +1,17 @@
+<h1>Register</h1>
+
+<form action="/users" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+
+    <div style="display: flex; flex-direction: column; max-width: 220px;">
+        <label for="email"></label>
+        <input type="email" id="email" name="user[email]" value=""/>
+
+        <label for="password"></label>
+        <input type="password" id="password" name="user[password]" value=""/>
+    </div>
+    <input type="submit" value="Register">
+    
+</form>
+
+<%= link_to "Log in", controller: "sessions", action: "new" %>
